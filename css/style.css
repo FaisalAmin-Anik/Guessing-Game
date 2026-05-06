@@ -7,3 +7,15 @@
 #reset{
     display: none;
 }
+#wrong{
+    display: none;
+}
+#p1{
+    color: red;
+}
+#p2{
+    color: blue;
+}
+#congrats{
+    display: none;
+}

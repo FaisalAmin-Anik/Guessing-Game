@@ -6,6 +6,8 @@ let num1=document.querySelector("#num1");
 let num2=document.querySelector("#num2");
 let chance=document.querySelector("#chance");
 let gameover=document.querySelector("#gameover");
+let wrong=document.querySelector("#wrong");
+let congrats=document.querySelector("#congrats");
 let first= num1.value;
 let second= num2.value;
 start.addEventListener("click",()=>{
@@ -20,14 +22,17 @@ reset.addEventListener("click",()=>{
 })
 check.addEventListener("click",()=>{
     if(num1.value==num2.value){
-        alert("Congratulations! You guessed the number correctly.");
+        congrats.style.display = "block";
+        wrong.style.display = "none";
     }else{
         let chancesLeft = parseInt(chance.textContent) - 1;
         chance.textContent = chancesLeft;
+        wrong.style.display = "block";
         if (chancesLeft === 0) {
             gameover.style.display = "block";
             chance.textContent = "0";
             check.style.display = "none";
+            wrong.style.display = "none";
         }
     }
 });
