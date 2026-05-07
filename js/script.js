@@ -30,6 +30,7 @@ gen.addEventListener("click",()=>{
     num2.value="";
     num1.value="";
     reveal.style.display = "none";
+    num1.disabled=true;
 });
 start.addEventListener("click",()=>{
     if (num1.value<0 || num1.value>10|| isNaN(num1.value) || num1.value=="") {
@@ -42,10 +43,10 @@ start.addEventListener("click",()=>{
         check.style.display = "inline-block";
         gameover.style.display = "none";
         first= num1.value;
-        num1.value="";
         start.style.display="none";
         error1.innerHTML ="";
         gen.style.display="none";
+        num1.disabled=true;
     }
 })
 reset.addEventListener("click",()=>{
@@ -57,6 +58,7 @@ reset.addEventListener("click",()=>{
     gen.style.display="inline-block";
     revealed.innerHTML = "";
     p1win.style.display = "none";
+    num1.disabled=false;
 })
 check.addEventListener("click",()=>{
     if(num2.value<0 || num2.value>10|| isNaN(num2.value)|| num2.value=="") {
