@@ -31,6 +31,7 @@ gen.addEventListener("click",()=>{
     num1.value="";
     reveal.style.display = "none";
     num1.disabled=true;
+    num2.disabled=false;
 });
 start.addEventListener("click",()=>{
     if (num1.value<0 || num1.value>10|| isNaN(num1.value) || num1.value=="") {
@@ -47,6 +48,8 @@ start.addEventListener("click",()=>{
         error1.innerHTML ="";
         gen.style.display="none";
         num1.disabled=true;
+        num2.disabled=false;
+        reveal.style.display = "none";
     }
 })
 reset.addEventListener("click",()=>{
@@ -59,6 +62,7 @@ reset.addEventListener("click",()=>{
     revealed.innerHTML = "";
     p1win.style.display = "none";
     num1.disabled=false;
+    num1.value="";
 })
 check.addEventListener("click",()=>{
     if(num2.value<0 || num2.value>10|| isNaN(num2.value)|| num2.value=="") {
@@ -83,6 +87,7 @@ check.addEventListener("click",()=>{
             wrong.style.display = "none";
             reveal.style.display = "inline-block";
             p1win.style.display = "block";
+            num2.disabled=true;
         }
     num2.value="";
     }
