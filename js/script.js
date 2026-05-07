@@ -1,3 +1,6 @@
+const decimal = Math.random();
+const max = 10;
+const randomInt = Math.floor(Math.random() * max);
 let start=document.querySelector("#start");
 let check=document.querySelector("#check");
 let player2=document.querySelector("#player2");
@@ -12,9 +15,23 @@ let reveal=document.querySelector("#reveal");
 let revealed=document.querySelector("#revealed");
 let error1=document.querySelector("#error1");
 let error2=document.querySelector("#error2");
+let gen=document.querySelector("#gen");
 let first= 0;
+gen.addEventListener("click",()=>{
+    first = randomInt;
+    player2.style.display="block";
+    gen.style.display="none";
+    start.style.display="none";
+    reset.style.display="inline-block";
+    chance.textContent="3";
+    check.style.display = "inline-block";
+    gameover.style.display = "none";
+    num2.value="";
+    num1.value="";
+    reveal.style.display = "none";
+});
 start.addEventListener("click",()=>{
-    if (num1.value<0 || num1.value>10|| isNaN(num1.value)) {
+    if (num1.value<0 || num1.value>10|| isNaN(num1.value) || num1.value=="") {
     error1.innerHTML = "Please enter a number between 0 and 10.";
     num1.value = "";
     }else{
@@ -35,11 +52,14 @@ reset.addEventListener("click",()=>{
     wrong.style.display = "none";
     start.style.display="inline-block";
     reset.style.display="none";
+    gen.style.display="inline-block";
+    revealed.innerHTML = "";
 })
 check.addEventListener("click",()=>{
-    if(num2.value<0 || num2.value>10|| isNaN(num2.value)) {
+    if(num2.value<0 || num2.value>10|| isNaN(num2.value)|| num2.value=="") {
         error2.innerHTML = "Please enter a number between 0 and 10.";
         num2.value = "";
+        wrong.style.display = "none";
         return;
     }else{
         error2.innerHTML = "";
