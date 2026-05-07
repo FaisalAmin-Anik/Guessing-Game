@@ -1,6 +1,3 @@
-const decimal = Math.random();
-const max = 10;
-const randomInt = Math.floor(Math.random() * max);
 let start=document.querySelector("#start");
 let check=document.querySelector("#check");
 let player2=document.querySelector("#player2");
@@ -19,6 +16,9 @@ let gen=document.querySelector("#gen");
 let p1win=document.querySelector("#p1win");
 let first= 0;
 gen.addEventListener("click",()=>{
+    const decimal = Math.random();
+    const max = 10;
+    const randomInt = Math.floor(Math.random() * max);
     first = randomInt;
     player2.style.display="block";
     gen.style.display="none";
