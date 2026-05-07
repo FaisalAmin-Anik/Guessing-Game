@@ -6,11 +6,20 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <h1>Guessing Number Game</h1>
+    <p>Rule:
+        <ul>
+            <li>Player 1 will choose a number between 0-10 and Player 2 will try to guess it.</li>
+            <li>Player 2 has 3 chances to guess the number correctly.</li>
+            <li>If Player 2 guesses the number correctly, they win. If they run out of chances, Player 1 wins.</li>
+        </ul>
+    </p>
     <h1 id="p1">Player 1</h1>
     <input id="num1" type="password" placeholder="Type any number 0-10">
     <button id="start">Start</button>
     <button id="reset">Reset</button>
     <button id="gen">Generate random number</button>
+    <h1 id="p1win" style="color: green; display: none;">Player 1 wins the game</h1>
     <h1 id="error1" style="color: red;"></h1>
     <div id="player2">
         <h1 id="p2">Player 2</h1>

@@ -16,6 +16,7 @@ let revealed=document.querySelector("#revealed");
 let error1=document.querySelector("#error1");
 let error2=document.querySelector("#error2");
 let gen=document.querySelector("#gen");
+let p1win=document.querySelector("#p1win");
 let first= 0;
 gen.addEventListener("click",()=>{
     first = randomInt;
@@ -54,6 +55,7 @@ reset.addEventListener("click",()=>{
     reset.style.display="none";
     gen.style.display="inline-block";
     revealed.innerHTML = "";
+    p1win.style.display = "none";
 })
 check.addEventListener("click",()=>{
     if(num2.value<0 || num2.value>10|| isNaN(num2.value)|| num2.value=="") {
@@ -77,6 +79,7 @@ check.addEventListener("click",()=>{
             check.style.display = "none";
             wrong.style.display = "none";
             reveal.style.display = "inline-block";
+            p1win.style.display = "block";
         }
     num2.value="";
     }
