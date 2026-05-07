@@ -45,6 +45,7 @@ start.addEventListener("click",()=>{
         num1.value="";
         start.style.display="none";
         error1.innerHTML ="";
+        gen.style.display="none";
     }
 })
 reset.addEventListener("click",()=>{
