@@ -1,3 +1,6 @@
+*{
+    background-color: rgb(60, 186, 128);
+}
 #player2{
     display: none;
 }

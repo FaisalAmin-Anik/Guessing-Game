@@ -14,6 +14,24 @@
             <li>If Player 2 guesses the number correctly, they win. If they run out of chances, Player 1 wins.</li>
         </ul>
     </p>
+
+
+    <div id="rangesec">
+    <h1>Type any number to set a range for guessing from 0 to that range</h1>
+    <input type="text" id="range" placeholder="Enter a number">
+    <button id="setRange">Set Range</button>
+    <h2 id="errorRange" style="color: red; display: none;">Please Enter a positive number</h2>
+    </div>
+
+    <div id="chancesec" style="display: none;">
+    <h1>How many chances do you want?</h1>
+    <input type="text" id="chances" placeholder="Enter number of chances">
+    <button id="setChances">Set Chances</button>
+    <h1 id="errorchance" style="color: red;"></h1>
+    </div>
+
+
+    <div id="player1" style="display: none;">
     <h1 id="p1">Player 1</h1>
     <input id="num1" type="password" placeholder="Type any number 0-10">
     <button id="start">Start</button>
@@ -21,9 +39,10 @@
     <button id="gen">Generate random number</button>
     <h1 id="p1win" style="color: green; display: none;">Player 1 wins the game</h1>
     <h1 id="error1" style="color: red;"></h1>
+    </div>
     <div id="player2">
         <h1 id="p2">Player 2</h1>
-        <h3>Chance: <span id="chance">3</span></h3>
+        <h3 id="chance"></h3>
         <input id="num2" type="text" placeholder="Type any number 0-10">
         <button id="check">Check</button>
         <h1 id="error2" style="color: red;"></h1>
@@ -33,8 +52,8 @@
         <button id="reveal" style="display:none;">Reveal</button>
         <h1 id="revealed"></h1>
     </div>
+    <button id="resetrange" style="display: none;">Reset Range Number</button>
     
-
 
 
 
