@@ -120,6 +120,7 @@ reset.addEventListener("click",()=>{
     p1win.style.display = "none";
     num1.disabled=false;
     num1.value="";
+    chancesnum = parseInt(chances.value);
 })
 check.addEventListener("click",()=>{
     if(num2.value<0 || num2.value > rangenum || isNaN(num2.value) || num2.value=="") {
