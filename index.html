@@ -7,23 +7,28 @@
 </head>
 <body>
     <h1 id="p1">Player 1</h1>
-    <input id="num1" type="password">
+    <input id="num1" type="password" placeholder="Type any number 0-10">
     <button id="start">Start</button>
     <button id="reset">Reset</button>
+    <h1 id="error1" style="color: red;"></h1>
     <div id="player2">
         <h1 id="p2">Player 2</h1>
         <h3>Chance: <span id="chance">3</span></h3>
-        <input id="num2" type="text">
+        <input id="num2" type="text" placeholder="Type any number 0-10">
         <button id="check">Check</button>
+        <h1 id="error2" style="color: red;"></h1>
         <h1 id="gameover">Game Over. Click reset to play again.</h1>
         <h1 id="wrong">Wrong Answer!</h1>
         <h1 id="congrats">Congratulations! You guessed the number correctly.</h1>
+        <button id="reveal" style="display:none;">Reveal</button>
+        <h1 id="revealed"></h1>
     </div>
     
 
 
 
 
+    
     <script src="./js/script.js"></script>
 </body>
 </html>
